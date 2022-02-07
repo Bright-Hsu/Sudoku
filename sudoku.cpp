@@ -11,7 +11,7 @@ int xplot = 1;
 int yplot = 1;
 
 void input() {
-	cout << "ÇëÊäÈë¾ØÕóÖµ:" << endl;
+	cout << "è¯·è¾“å…¥çŸ©é˜µå€¼:" << endl;
 	for (int i = 0; i < 9; ++i) {
 		cin >> vec[i/3][i%3];
 		if (vec[i / 3][i % 3] == 0) {
@@ -22,7 +22,7 @@ void input() {
 }
 
 void output(vector<vector<int>> nums) {
-	cout << "¾ØÕó×´Ì¬Îª:" << endl;
+	cout << "çŸ©é˜µçŠ¶æ€ä¸º:" << endl;
 	for (int i = 0; i < 9; ++i) {
 		cout << nums[i / 3][i % 3] << " ";
 		if ((i+1) % 3 == 0)
@@ -55,7 +55,7 @@ void bfs() {
 		q.pop();
 		p.pop();
 		++count;
-		cout << "×´Ì¬" << count << ":" << endl;
+		cout << "çŠ¶æ€" << count << ":" << endl;
 		output(cur);
 		if (cur == goal) {
 			return;
