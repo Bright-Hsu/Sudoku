@@ -8,7 +8,7 @@
 
 重排九宫问题又称为八数码问题。在3×3的方格棋盘上放置分别标有数字1,2,3,4,5,6,7,8的8张牌,初始状态为S0，目标状态为Sg，其从左到右、从上到下顺序依次为1,2,3,8,0,4,7,6,5（0代表空格）。例如，图左所示是初始状态，图右所示是目标状态。
 
-![bfs](https://github.com/Bright-Hsu/Sudoku/blob/main/pictures/problem.png)
+![problem](https://github.com/Bright-Hsu/Sudoku/blob/main/pictures/problem.png "problem")
 
 可使用的算符有空格左移、空格上移、空格右移和空格下移，即他们只允许把位于空格左、上、右、下边的牌移入空格。要求设计一个广度优先算法和一个启发式搜索算法寻找从初始状态到目标状态的路径，并对不同算法的性能进行比较分析。
 
