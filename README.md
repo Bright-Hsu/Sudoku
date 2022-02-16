@@ -8,7 +8,7 @@
 
 重排九宫问题又称为八数码问题。在3×3的方格棋盘上放置分别标有数字1,2,3,4,5,6,7,8的8张牌,初始状态为S0，目标状态为Sg，其从左到右、从上到下顺序依次为1,2,3,8,0,4,7,6,5（0代表空格）。例如，图左所示是初始状态，图右所示是目标状态。
 
-![image-20220207193008859](C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220207193008859.png)
+![bfs](https://github.com/Bright-Hsu/Sudoku/blob/main/pictures/problem.png)
 
 可使用的算符有空格左移、空格上移、空格右移和空格下移，即他们只允许把位于空格左、上、右、下边的牌移入空格。要求设计一个广度优先算法和一个启发式搜索算法寻找从初始状态到目标状态的路径，并对不同算法的性能进行比较分析。
 
@@ -33,9 +33,9 @@
 对于这类状态问题，因为会产生多个状态，因此可以设计一个类来表示九宫格的每个状态，因此，我设计了一个类Sudoku，类的成员变量如下：
 
 ```c++
-  **vector**<**vector**<int>> myVec; //九宫格状态
+  vector<vector<int>> myVec; //九宫格状态
 
-  **suduko*** pre;  //结点的上一个状态结点
+  suduko pre;  //结点的上一个状态结点
 
   int direct;  //上一个状态到当前状态的方向
 
@@ -82,7 +82,7 @@
 
   以开头的题目为例，输入初始状态为[2,8,3,1,0,4,7,6,5]，其广度优先搜索过程应该如下图所示，最优搜索路径用红色剪头标出：
 
-![image-20220207193115682](C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220207193115682.png)
+![image-20220207193115682](https://github.com/Bright-Hsu/Sudoku/blob/main/pictures/bfs.png)
 
 ### **4.** **启发式搜索算法的设计**
 
@@ -116,7 +116,7 @@ $$
 
 以开头的题目为例，输入初始状态为[2,8,3,1,0,4,7,6,5]，其广度优先搜索树应该如下图所示，最优搜索路径用红色剪头标出。图中节点旁的数字为该节点的估价值。
 
-![image-20220207192806495](C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\image-20220207192806495.png)
+![image-20220207192806495](https://github.com/Bright-Hsu/Sudoku/blob/main/pictures/hs.png)
 
 ## 实验结果分析
 
